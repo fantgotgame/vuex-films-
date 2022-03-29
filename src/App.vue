@@ -1,8 +1,6 @@
 <template>
   <Header/>
-  <div class="container">
-    <router-view />
-  </div>
+  <router-view/>
 </template>
 
 <script>
@@ -18,13 +16,9 @@ export default {
 
 <style lang="scss">
 body {
-  background: azure;
+  background: #100e19;
 }
 #app {
 
-}
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
 }
 </style>

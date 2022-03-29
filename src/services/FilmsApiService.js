@@ -15,5 +15,15 @@ export default {
         month: 'APRIL'
       }
     });
+  },
+
+  getTopFilms (type, page) {
+    return axios.get(`${url}/api/v2.2/films/top`, {
+      headers: headers,
+      params: {
+        type,
+        page
+      }
+    });
   }
 };

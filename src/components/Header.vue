@@ -34,9 +34,12 @@ header {
     display: flex;
     justify-content: center;
   }
-  &__item {
+  &__item a {
     list-style-type: none;
     padding: 20px;
+    color: white!important;
+    font-size: 24px;
+    text-decoration: none;
   }
 }
 </style>

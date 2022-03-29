@@ -1,0 +1,116 @@
+<template>
+  <swiper
+      :slidesPerView="3"
+      :centeredSlides="true"
+      :loop="true"
+      :space-between="100"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+  >
+    <swiper-slide ref="ss" v-for="itemFilm in getTopFilms" :key="itemFilm.filmId">
+      <div class="film-card-slider">
+        <img :src="itemFilm.posterUrl" alt=""
+             class="film-card-slider__poster">
+        <div class="film-card-slider__description mt-8">
+          <div class="film-card-slider__title mt-16">
+            {{ itemFilm.nameRu }}
+          </div>
+          <div class="film-card-slider__premier mt-16">
+            <span class="text-bold film-card-slider__text">Премьера в России:</span> {{ itemFilm.year }} год
+          </div>
+          <div class="film-card-slider__duration mt-16" v-if="itemFilm.filmLength">
+            <span class="text-bold film-card-slider__text">
+              Длительность: </span>
+            {{ itemFilm.filmLength }} минут
+          </div>
+          <div class="film-card-slider__genres mt-16">
+            <span class="text-bold"> Жанры: </span>
+            <span v-for="(item, index) in itemFilm.genres">
+              {{ item.genre }}{{ index < itemFilm.genres.length - 1 ? ', ' : ' ' }}
+            </span>
+          </div>
+          <div class="film-card-slider__country mt-16">
+            <span class="text-bold film-card-slider__text">Страна: </span> {{ itemFilm.countries[0].country }}
+          </div>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper>
+</template>
+
+<script>
+import {mapGetters} from 'vuex';
+import {Swiper, SwiperSlide} from 'swiper/vue';
+import 'swiper/css';
+
+export default {
+  name: 'MyComponent',
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
+  },
+  computed: mapGetters(['getTopFilms']),
+}
+</script>
+
+<style lang="scss" scoped>
+.swiper-slide {
+  opacity: 1;
+  user-select: none;
+
+  &:not(.swiper-slide-active) {
+    opacity: 0.6;
+    user-select: none;
+  }
+}
+
+.film-card-slider {
+  cursor: pointer;
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translate(0);
+  border: 1px solid transparent;
+
+  &__description {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & > * {
+      color: white;
+    }
+  }
+
+  &__poster {
+    border-radius: 40px;
+    box-shadow: 20px 20px 20px 20px black;
+  }
+
+  &__title {
+    display: block;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 6px 9px 6px black;
+  }
+
+  &__text {
+    font-size: 24px;
+    text-shadow: 6px 9px 6px black;
+  }
+}
+</style>

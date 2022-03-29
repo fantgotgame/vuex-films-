@@ -1,10 +1,10 @@
 <template>
   <div class="film-card" v-if="premierItem.year === 2022 || premierItem.year === 2021">
     <img :src="premierItem.posterUrl" alt="" class="film-card__poster">
-    <div class="film-card__title mt-16">
-      {{ premierItem.nameRu }}
-    </div>
     <div class="film-card__description mt-8">
+      <div class="film-card__title mt-16">
+        {{ premierItem.nameRu }}
+      </div>
       <div class="film-card__premier mt-4">
         <span class="text-bold">Премьера в России:</span> {{ getYear(premierItem.premiereRu) }} год
       </div>
@@ -25,18 +25,20 @@
 </template>
 
 <script>
+import MethodService from '@/services/MethodsService'
+
 export default {
   name: 'PreviewFilmCard',
   props: ['premierItem'],
   methods: {
     getYear(year) {
-      return year.split('-')[0];
+     MethodService.getYear(year)
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .film-card {
   cursor: pointer;
   padding: 15px;
@@ -63,7 +65,10 @@ export default {
 
   &__text {
     font-size: 16px;
+  }
 
+  &__description > * {
+    color: white;
   }
 }
 </style>

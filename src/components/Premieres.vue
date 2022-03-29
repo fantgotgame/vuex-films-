@@ -2,12 +2,11 @@
   <div class="cards">
     <PreviewFilmCard v-for="item in getPremieres" :key="item.id" :premier-item="item"/>
   </div>
-
 </template>
 
 <script>
 import PreviewFilmCard from "@/components/PreviewFilmCard";
-import { mapGetters } from 'vuex';
+import {mapGetters} from 'vuex';
 
 export default {
   name: 'Premieres',
@@ -20,10 +19,10 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-  .cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+<style lang="scss" scoped>
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 </style>
