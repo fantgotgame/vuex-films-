@@ -11,7 +11,9 @@
         <li class="header-menu__item">
           <router-link to="/search-film">Поиск фильма</router-link>
         </li>
-        <li class="header-menu__item"></li>
+        <li class="header-menu__item">
+          <router-link to="/premieres">Премьеры фильмов</router-link>
+        </li>
       </ul>
     </div>
   </header>

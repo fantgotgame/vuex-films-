@@ -1,19 +1,18 @@
 <template>
   <div class="cards">
-    <FilmCard v-for="item in getPremieres" :key="item.id" :premier-item="item"/>
-
+    <PreviewFilmCard v-for="item in getPremieres" :key="item.id" :premier-item="item"/>
   </div>
 
 </template>
 
 <script>
-import FilmCard from "@/components/FilmCard";
+import PreviewFilmCard from "@/components/PreviewFilmCard";
 import { mapGetters } from 'vuex';
 
 export default {
   name: 'Premieres',
   components: {
-    FilmCard
+    PreviewFilmCard
   },
   computed: mapGetters(['getPremieres']),
   mounted() {

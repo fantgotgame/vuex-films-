@@ -1,5 +1,5 @@
 <template>
-  <Premieres />
+
 </template>
 
 <script>

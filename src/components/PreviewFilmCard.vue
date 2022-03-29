@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'FilmCard',
+  name: 'PreviewFilmCard',
   props: ['premierItem'],
   methods: {
     getYear(year) {

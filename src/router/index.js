@@ -1,23 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Top from "@/views/Top.vue";
-import SearchFilm from "@/views/SearchFilm.vue";
-import Home from "@/views/Home.vue";
+import ViewTop from "@/views/ViewTop.vue";
+import ViewSearchFilm from "@/views/ViewSearchFilm.vue";
+import ViewHome from "@/views/ViewHome.vue";
+import ViewPremieres from "@/views/ViewPremieres.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: ViewHome,
   },
   {
     path: "/top",
     name: "Top",
-    component: Top,
+    component: ViewTop,
   },
   {
     path: "/search-film",
     name: "SearchFilm",
-    component: SearchFilm,
+    component: ViewSearchFilm,
+  },
+  {
+    path: "/premieres",
+    name: "Premieres",
+    component: ViewPremieres,
   },
 ];
 
