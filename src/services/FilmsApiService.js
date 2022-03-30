@@ -35,5 +35,11 @@ export default {
         page
       }
     });
-  }
+  },
+
+  getFilmInfo(id) {
+    return axios.get(`${url}/api/v2.2/films/${id}`, {
+      headers: headers,
+    });
+  },
 };

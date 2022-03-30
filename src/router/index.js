@@ -3,6 +3,7 @@ import ViewTop from "@/views/ViewTop.vue";
 import ViewSearchFilm from "@/views/ViewSearchFilm.vue";
 import ViewHome from "@/views/ViewHome.vue";
 import ViewPremieres from "@/views/ViewPremieres.vue";
+import FilmInfo from "@/views/ViewFilmInfo.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/premieres",
     name: "Premieres",
     component: ViewPremieres,
+  },
+  {
+    path: "/film-info/:id",
+    name: "FilmInfo",
+    component: FilmInfo,
   },
 ];
 
