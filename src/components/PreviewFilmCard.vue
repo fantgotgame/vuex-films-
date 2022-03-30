@@ -1,15 +1,15 @@
 <template>
-  <div class="film-card" v-if="premierItem.year === 2022 || premierItem.year === 2021">
+  <div class="film-card">
     <img :src="premierItem.posterUrl" alt="" class="film-card__poster">
     <div class="film-card__description mt-8">
       <div class="film-card__title mt-16">
         {{ premierItem.nameRu }}
       </div>
       <div class="film-card__premier mt-4">
-        <span class="text-bold">Премьера в России:</span> {{ getYear(premierItem.premiereRu) }} год
+        <span class="text-bold">Премьера в России:</span> {{ year }} год
       </div>
       <div class="film-card__duration mt-4">
-        <span class="text-bold">Длительность: </span> {{ premierItem.duration }} минут
+        <span class="text-bold">Длительность: </span> {{ filmLength }} минут
       </div>
       <div class="film-card__genres mt-4">
         <span class="text-bold"> Жанры: </span>
@@ -25,16 +25,9 @@
 </template>
 
 <script>
-import MethodService from '@/services/MethodsService'
-
 export default {
   name: 'PreviewFilmCard',
-  props: ['premierItem'],
-  methods: {
-    getYear(year) {
-     MethodService.getYear(year)
-    }
-  }
+  props: ['premierItem', 'filmLength', 'year'],
 }
 </script>
 
@@ -46,6 +39,7 @@ export default {
   width: 300px;
   transform: translate(0);
   border: 1px solid transparent;
+  margin-top: 30px;
 
   &__poster {
     height: 400px;

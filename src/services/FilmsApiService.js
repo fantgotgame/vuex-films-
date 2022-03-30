@@ -7,7 +7,7 @@ const headers = {
 };
 
 export default {
-  getPremieres () {
+  getPremieres() {
     return axios.get(`${url}/api/v2.2/films/premieres`, {
       headers: headers,
       params: {
@@ -17,11 +17,21 @@ export default {
     });
   },
 
-  getTopFilms (type, page) {
+  getTopFilms(type, page) {
     return axios.get(`${url}/api/v2.2/films/top`, {
       headers: headers,
       params: {
         type,
+        page
+      }
+    });
+  },
+
+  getFilmsBySearch(keyword, page) {
+    return axios.get(`${url}/api/v2.1/films/search-by-keyword`, {
+      headers: headers,
+      params: {
+        keyword,
         page
       }
     });
