@@ -18,28 +18,5 @@
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  name: 'Header',
-}
-</script>
-
-<style scoped lang="scss">
-header {
-  padding: 20px 0;
-}
-.header-menu {
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-  &__item a {
-    list-style-type: none;
-    padding: 20px;
-    color: white!important;
-    font-size: 24px;
-    text-decoration: none;
-  }
-}
-</style>
+<script src='./Header.js' />
+<style scoped lang="scss" src='./Header.scss' />

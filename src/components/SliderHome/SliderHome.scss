@@ -1,0 +1,48 @@
+
+.swiper-slide {
+   opacity: 1;
+   user-select: none;
+ 
+   &:not(.swiper-slide-active) {
+     opacity: 0.6;
+     user-select: none;
+   }
+ }
+ 
+ .film-card-slider {
+   cursor: pointer;
+   padding: 15px;
+   box-sizing: border-box;
+   transform: translate(0);
+   border: 1px solid transparent;
+ 
+   &__description {
+     width: 80%;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+ 
+     & > * {
+       color: white;
+     }
+   }
+ 
+   &__poster {
+     border-radius: 40px;
+     box-shadow: 20px 20px 20px 20px black;
+   }
+ 
+   &__title {
+     display: block;
+     font-weight: bold;
+     font-size: 50px;
+     text-shadow: 6px 9px 6px black;
+   }
+ 
+   &__text {
+     font-size: 24px;
+     text-shadow: 6px 9px 6px black;
+   }
+ }

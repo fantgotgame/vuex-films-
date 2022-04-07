@@ -4,16 +4,16 @@
 </template>
 
 <script>
-import SliderHome from "@/components/SliderHome";
+import SliderHome from "@/components/SliderHome/SliderHome.vue";
 
 export default {
   components: {
-    SliderHome
+    SliderHome,
   },
   mounted() {
-    this.$store.dispatch('getTopFilmsAxios');
-  }
-}
+    this.$store.dispatch("getTopFilmsAxios");
+  },
+};
 </script>
 
 <style scoped lang="scss">

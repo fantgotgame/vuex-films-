@@ -1,18 +1,18 @@
 <template>
   <div class="container">
     <h1>Премьеры</h1>
-    <Premieres/>
+    <Premieres />
   </div>
 </template>
 
 <script>
-import Premieres from "@/components/Premieres";
+import Premieres from "@/components/Premieres/Premieres.vue";
 
 export default {
   components: {
-    Premieres
-  }
-}
+    Premieres,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
