@@ -21,5 +21,5 @@ export default {
          onSlideChange,
       };
    },
-   computed: mapGetters(['getTopFilms']),
+   computed: mapGetters(['getTopAwaitFilms']),
 }

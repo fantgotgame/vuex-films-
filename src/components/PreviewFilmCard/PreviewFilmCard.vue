@@ -9,11 +9,11 @@
         <div class="film-card__title mt-16">
           {{ premierItem.nameRu }}
         </div>
-        <div class="film-card__premier mt-4">
+        <div class="film-card__premier mt-4" v-if="year">
           <span class="text-bold">Премьера в России:</span> {{ year }} год
         </div>
         <div class="film-card__duration mt-4">
-          <span class="text-bold">Длительность: </span> {{ filmLength }} минут
+          <span class="text-bold">Длительность: </span> {{ filmLength }}
         </div>
         <div class="film-card__genres mt-4">
           <span class="text-bold"> Жанры: </span>

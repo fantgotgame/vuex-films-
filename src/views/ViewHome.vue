@@ -11,7 +11,7 @@ export default {
     SliderHome,
   },
   mounted() {
-    this.$store.dispatch("getTopFilmsAxios");
+    this.$store.dispatch("getTopAwaitFilmsAxios");
   },
 };
 </script>
