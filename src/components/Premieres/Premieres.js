@@ -1,4 +1,4 @@
-import PreviewFilmCard from "@/components/PreviewFilmCard/PreviewFilmCard";
+import PreviewFilmCard from "@/components/PreviewFilmCard/PreviewFilmCard.vue";
 import { mapGetters } from 'vuex';
 
 export default {
