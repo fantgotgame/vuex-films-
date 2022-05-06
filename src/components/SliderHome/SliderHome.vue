@@ -5,9 +5,6 @@
       @slideChange="onSlideChange"
       :loop="true"
       :space-between="100"
-      :autoplay='{
-  "delay": 1000,
-  "disableOnInteraction": false}'
   >
     <swiper-slide v-for="itemFilm in getTopAwaitFilms" :key="itemFilm.filmId">
       <router-link
