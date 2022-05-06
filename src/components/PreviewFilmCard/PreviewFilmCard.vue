@@ -1,7 +1,7 @@
 <template>
   <router-link
-    :to="{ path: '/film-info/' + premierItem.filmId }"
-    @click="setCurrenFilmId(premierItem.filmId)"
+    :to="{ path: '/film-info/' + getUrlForCurrentFilm }"
+    @click="setCurrenFilmId(getUrlForCurrentFilm)"
   >
     <div class="film-card">
       <img :src="premierItem.posterUrl" alt="" class="film-card__poster" />
