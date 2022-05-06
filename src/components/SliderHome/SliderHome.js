@@ -8,6 +8,11 @@ export default {
       Swiper,
       SwiperSlide,
    },
+   methods: {
+      setCurrenFilmId(id) {
+         this.$store.dispatch('setCurrenFilmId', id);
+      }
+   },
    setup() {
       const onSwiper = (swiper) => {
          console.log(swiper);
@@ -19,6 +24,7 @@ export default {
          onSwiper,
          onSlideChange,
       };
+
    },
    computed: mapGetters(['getTopAwaitFilms']),
 }
