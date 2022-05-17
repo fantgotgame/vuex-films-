@@ -9,7 +9,6 @@ export default {
    computed: mapGetters(['getTop250Films']),
    mounted() {
       this.$store.dispatch('getTop250FilmsAxios');
-      console.log(this.getTop250Films);
    },
    methods: {
       getYear(year) {
