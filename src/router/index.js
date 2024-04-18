@@ -5,6 +5,7 @@ import ViewHome from "@/views/ViewHome.vue";
 import ViewPremieres from "@/views/ViewPremieres.vue";
 import FilmInfo from "@/views/ViewFilmInfo.vue";
 
+// Роуты
 const routes = [
   {
     path: "/",

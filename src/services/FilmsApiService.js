@@ -11,7 +11,7 @@ export default {
       return axios.get(`${url}/api/v2.2/films/premieres`, {
          headers: headers,
          params: {
-            year: 2022,
+            year: 2024,
             month: 'APRIL'
          }
       });

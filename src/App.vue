@@ -1,6 +1,7 @@
 <template>
   <Header />
   <router-view />
+<!--  Тестовая -->
 </template>
 
 <script>
